@@ -2,6 +2,7 @@
     function RoomsCtrl(Room){
         // make list of rooms available to the view by attaching them to the controller
         // ex: this.rooms
+		this.room = Room;
         this.rooms = Room.all;
     }
     
