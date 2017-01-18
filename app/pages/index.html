@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html ng-app="blocChat">
 <head lang="en">
-    <script src="js/angular-ui-router.min.js"></script>
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <script src="/scripts/app.js"></script>
+    
+    <ui-view></ui-view>
     
     <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
     <script>// Initialize Firebase
@@ -20,7 +20,11 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8.angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/factories/Room.js"></script>
+    <script src="scripts/controllers/RoomsCtrl.js"></script>
 </body>
 </html>
