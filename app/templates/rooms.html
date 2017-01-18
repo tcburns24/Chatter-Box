@@ -1,10 +1,15 @@
-<h1>Home Page</h1>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+<h1>Chat Rooms</h1>
 
 <!-- show room names here -->
 <!-- ng-repeat in the album view in bloc jams -->
 
 <div ng-repeat="room in rooms.rooms">
-    <ul>
-        <li>{{ room.$value }}</li>
-    </ul>
+    <p class="rooms-home">{{ room.name }}</p>  
 </div>
+
+<form ng-submit="rooms.room.addRoom(newRoomName)">
+	<input type="text" ng-model="newRoomName">
+	<button type="submit">Create room</button>
+</form>
