@@ -17,4 +17,4 @@
     angular
         .module('blocChat', ['ui.router'])
         .config(config);
-})(); 123
+})();
