@@ -5,11 +5,19 @@
 <!-- show room names here -->
 <!-- ng-repeat in the album view in bloc jams -->
 
-<div ng-repeat="room in rooms.rooms">
-    <p class="rooms-home">{{ room.name }}</p>  
-</div>
+<section class="roomcol">
+	<form ng-submit="rooms.room.addRoom(newRoomName)">
+		<input type="text" ng-model="newRoomName" placeholder="Enter New Room Name">
+		<button type="submit" style="pull-right">Create room</button>
+	</form>
+	<div ng-repeat="room in rooms.rooms">
+		<a href="#" ng-click='rooms.selectRoom(room.$id)'><p class="rooms-home">{{ room.name }}</p></a>
+	</div>
+</section>
 
-<form ng-submit="rooms.room.addRoom(newRoomName)">
-	<input type="text" ng-model="newRoomName">
-	<button type="submit">Create room</button>
-</form>
+<section class="messagecol">
+	<div ng-repeat="message in rooms.messages">
+		<p class="messages-home">{{ message.username }}: {{ message.content }}</p>  
+	</div>
+</section>
+

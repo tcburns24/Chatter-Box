@@ -1,11 +1,36 @@
 h1 {
     background-color: lightgrey;
-    padding: 12px 12px;
+    padding: 12px 12px 12px 12px;
     text-indent: 15px;
 }
 
+.roomcol {
+	width: 25%;
+	height: 100vh;
+	background-color: #585e65;
+	float: left;
+}
+
+.messagecol {
+	float: left;
+	background-color: #d9dce2;
+	width: 50%;
+	height: 100vh;
+}
+
 .rooms-home {
-    color: darkgrey;
-    text-indent: 25px;
+    color: #cccccc;
+    text-indent: 35px;
     font-size: 18px;
+}
+
+.messages-home {
+    color: #3b3b3b;
+    text-indent: 35px;
+    font-size: 18px;
+}
+
+form {
+	position: relative;
+	padding: 20px 10px 10px 10px;
 }
