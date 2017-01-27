@@ -1,5 +1,5 @@
 (function() {
-    function RoomsCtrl(Room, Message){
+    function RoomsCtrl(Room, Message, BlocChatCookies){
         // make list of rooms available to the view by attaching them to the controller
         // ex: this.rooms
 		this.room = Room;
@@ -8,6 +8,7 @@
 		this.selectRoom = function(roomId) {
 			this.messages = Message.getByRoomId(roomId);
 		}
+		this.cookie = BlocChatCookies;
 		
 		// user clicks room name
 		// run selectRoom and pass in room id
@@ -17,5 +18,5 @@
     
     angular
         .module('blocChat')
-        .controller('RoomsCtrl', ['Room', 'Message', RoomsCtrl])
+        .controller('RoomsCtrl', ['Room', 'Message', 'BlocChatCookies', RoomsCtrl])
 })();

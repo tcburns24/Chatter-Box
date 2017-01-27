@@ -34,3 +34,11 @@ form {
 	position: relative;
 	padding: 20px 10px 10px 10px;
 }
+
+.signedinas {
+	float: left;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	color: goldenrod;
+}

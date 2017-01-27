@@ -6,6 +6,13 @@
 <!-- ng-repeat in the album view in bloc jams -->
 
 <section class="roomcol">
+	<div ng-show="rooms.cookie.getUser()" ng-hide="!rooms.cookie.getUser()" class="signedinas">
+		Signed in as: {{ rooms.cookie.getUser(username) }}
+	</div>
+	<form ng-hide="rooms.cookie.getUser()" ng-submit="rooms.cookie.setUserCookie(username)">
+		<input type="text" ng-model="username" placeholder="Enter your username">
+		<button type="submit" style="pull-right">Set Username</button>
+	</form>
 	<form ng-submit="rooms.room.addRoom(newRoomName)">
 		<input type="text" ng-model="newRoomName" placeholder="Enter New Room Name">
 		<button type="submit" style="pull-right">Create room</button>
