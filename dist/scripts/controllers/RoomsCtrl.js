@@ -4,9 +4,12 @@
         // ex: this.rooms
 		this.room = Room;
         this.rooms = Room.all;
+		this.message = Message;
 		this.messages = null;
-		this.selectRoom = function(roomId) {
-			this.messages = Message.getByRoomId(roomId);
+		this.currentRoom = null;
+		this.selectRoom = function(room) {
+			this.messages = Message.getByRoomId(room.$id);
+			this.currentRoom = room;
 		}
 		this.cookie = BlocChatCookies;
 		

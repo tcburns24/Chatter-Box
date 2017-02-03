@@ -7,7 +7,10 @@
 
 <section class="roomcol">
 	<div ng-show="rooms.cookie.getUser()" ng-hide="!rooms.cookie.getUser()" class="signedinas">
-		Signed in as: {{ rooms.cookie.getUser(username) }}
+		Signed in as: <strong>{{ rooms.cookie.getUser(username) }}</strong>
+	</div>
+	<div>
+		<p>{{ rooms.currentRoom.name }}</p>
 	</div>
 	<form ng-hide="rooms.cookie.getUser()" ng-submit="rooms.cookie.setUserCookie(username)">
 		<input type="text" ng-model="username" placeholder="Enter your username">
@@ -17,8 +20,12 @@
 		<input type="text" ng-model="newRoomName" placeholder="Enter New Room Name">
 		<button type="submit" style="pull-right">Create room</button>
 	</form>
+	<form ng-submit="rooms.message.send(newMessage, rooms.currentRoom.$id)">
+		<input type="text" ng-model="newMessage" placeholder="Enter your message">
+		<button type="submit" style="pull-right">Send Message</button>
+	</form>
 	<div ng-repeat="room in rooms.rooms">
-		<a href="#" ng-click='rooms.selectRoom(room.$id)'><p class="rooms-home">{{ room.name }}</p></a>
+		<a href="#" ng-click='rooms.selectRoom(room)'><p class="rooms-home">{{ room.name }}</p></a>
 	</div>
 </section>
 

@@ -5,7 +5,7 @@
                 enabled: true,
                 requireBase: false
         });
-        
+
         $stateProvider
             .state('rooms', {
                 url: '/',
@@ -13,8 +13,8 @@
                 templateUrl: '/templates/rooms.html'
         });
     }
-    
+
     angular
         .module('blocChat', ['ui.router', 'ui.bootstrap', 'firebase', 'ngCookies'])
         .config(config);
-})();
+})(); 
