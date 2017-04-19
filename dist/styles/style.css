@@ -5,16 +5,24 @@ h1 {
 }
 
 .roomcol {
-	width: 25%;
+	width: 30%;
 	height: 100vh;
-	background-color: #585e65;
+	background: linear-gradient(#5e656d, #232426);
 	float: left;
+}
+
+#currentroom {
+/*	padding: 10px 10px 10px 10px;*/
+	font-size: 22px;
+	position: relative;
+	color: silver;
+	padding: 5px 10px 5px 10px;
 }
 
 .messagecol {
 	float: left;
-	background-color: #d9dce2;
-	width: 50%;
+	background: linear-gradient(#d9dce2, #cddbf7);
+	width: 70%;
 	height: 100vh;
 }
 
@@ -36,9 +44,6 @@ form {
 }
 
 .signedinas {
-	float: left;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	padding-left: 20px;
+	padding: 15px 10px 5px 10px;
 	color: goldenrod;
 }

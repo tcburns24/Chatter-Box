@@ -10,7 +10,7 @@
 		Signed in as: <strong>{{ rooms.cookie.getUser(username) }}</strong>
 	</div>
 	<div>
-		<p>{{ rooms.currentRoom.name }}</p>
+		<p id="currentroom">Current Room: {{ rooms.currentRoom.name }}</p> 
 	</div>
 	<form ng-hide="rooms.cookie.getUser()" ng-submit="rooms.cookie.setUserCookie(username)">
 		<input type="text" ng-model="username" placeholder="Enter your username">
@@ -31,7 +31,6 @@
 
 <section class="messagecol">
 	<div ng-repeat="message in rooms.messages">
-		<p class="messages-home">{{ message.username }}: {{ message.content }}</p>  
+		<p class="messages-home">{{ message.username }}: {{ message.content }}</p>
 	</div>
 </section>
-
