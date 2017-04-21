@@ -5,7 +5,6 @@
 		function getUser() {
 			// code to read the cookie (using $cookies service)
 			var currentUser = $cookies.get('blocChatCurrentUser');
-			console.log(currentUser);
 			return currentUser;
 		}
 		
@@ -15,10 +14,16 @@
 			$cookies.put('blocChatCurrentUser', username);
 		};
 		
+		function deleteUserCookie() {
+			$cookies.remove('blocChatCurrentUser');
+			console.log($cookies.get('blocChatCurrentUser'));
+		};
+		
 		return {
 			// make functions public
 			getUser: getUser,
-			setUserCookie: setUserCookie
+			setUserCookie: setUserCookie,
+			deleteUserCookie: deleteUserCookie
 		};
 	}
 	

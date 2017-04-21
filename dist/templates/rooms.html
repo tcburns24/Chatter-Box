@@ -8,6 +8,7 @@
 <section class="roomcol">
 	<div ng-show="rooms.cookie.getUser()" ng-hide="!rooms.cookie.getUser()" class="signedinas">
 		Signed in as: <strong>{{ rooms.cookie.getUser(username) }}</strong>
+		<input type="button" ng-click="rooms.cookie.deleteUserCookie()"  value="Sign Out">
 	</div>
 	<div>
 		<p id="currentroom">Current Room: {{ rooms.currentRoom.name }}</p> 
